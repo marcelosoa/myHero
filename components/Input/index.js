@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
-import RadioComponent from '../Radio';
 
 export default function InputComponent({placeholder}) {
   return (
@@ -21,13 +20,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   input: {
-    height: 60,
+    height: 45,
     flex: 1,
     backgroundColor: '#F8F9FA',
-    paddingLeft: 40,
+    paddingLeft: 20,
     marginHorizontal: 20,
     borderRadius: 8,
-    fontSize: 18,
+    fontSize: 15,
     borderColor: '#E4E7EB',
     borderWidth: 1,
   },

@@ -4,7 +4,7 @@ import RadioComponent from './components/Radio/index';
 import HomeScreen from './components/screens/home';
 
 function App() {
-  return <HomeScreen />;
+  return <RegisterScreen />;
 }
 
 export default App;
