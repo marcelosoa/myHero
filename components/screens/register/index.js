@@ -23,7 +23,7 @@ export default function RegisterScreen() {
   <InputComponent placeholder="senha"/>
   <InputComponent placeholder="confirmar senha"/>
   <InputComponent placeholder="email"/>
-  <InputComponent placeholder="cpf"/>
+  <InputComponent placeholder="CPF/CNPJ"/>
   <RadioComponent
   selected={selected}
   options={['CPF', 'CNPJ']}
@@ -42,16 +42,16 @@ export default function RegisterScreen() {
 
 const styles = StyleSheet.create({
   textInput: {
-    height: 50,
+    height: 60,
     marginTop: 20,
     paddingLeft: 20,
     marginHorizontal: 20,
     borderRadius: 9,
-    backgroundColor: '#090580',
-    borderColor: '#E4E7EB',
+    backgroundColor: '#CBB279',
+    borderColor: '##CBB279',
     borderWidth: 1,
-    alignContent: 'center',
-    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
   },
   text: {
     color: '#fff',
