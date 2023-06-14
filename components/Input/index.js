@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
 
-export default function InputComponent({placeholder}) {
+export default function InputComponent({placeholder, style}) {
   return (
     <View style={styles.container}>
       <TextInput
       placeholder={placeholder}
-      style={styles.input}
+      style={[styles.input, style]}
       underlineColorAndroid="transparent"
       placeholderTextColor={'#7B8794'}
       />
