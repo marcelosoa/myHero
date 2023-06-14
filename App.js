@@ -5,7 +5,7 @@ import HomeScreen from './components/screens/home';
 import LoginScreen from './components/screens/login';
 
 function App() {
-  return <LoginScreen />;
+  return <HomeScreen />;
 }
 
 export default App;
