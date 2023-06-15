@@ -44,7 +44,7 @@ export default function LoginScreen() {
           <ButtonComponent text="Conectar-se" style={styles.button} />
         </View>
         <View style={styles.viewBottom}>
-          <ButtonComponent style={styles.signUp} text="Cadastrar-se" onPress={handleCreateAccount()}/>
+          <ButtonComponent style={styles.signUp} text="Cadastrar-se" onPress={handleCreateAccount}/>
           <ButtonComponent
             style={styles.forgotPassword}
             text="Esqueceu a senha"
