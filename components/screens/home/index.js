@@ -11,7 +11,7 @@ export default function HomeScreen() {
      source={require('../../../assets/images/dog.png')}
       />
       <Text style={styles.hello}>
-        Hello `user`
+        Hello
       </Text>
       <TouchableOpacity style={styles.top}>
         <Text>Tamo aqui</Text>
@@ -28,7 +28,7 @@ export default function HomeScreen() {
         />
       </View>
       <TouchableOpacity >
-        <Text style={styles.find}>Proximos á você</Text>
+        <Text style={styles.find}>Proximos a você</Text>
       </TouchableOpacity>
       <CardComponent
       people={['Marcelo']}
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     top: 101,
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#060803',
+    color: '#0b061e',
   },
   top: {
     position: 'absolute',
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     height: 58,
     left: 29,
     top: 135,
-    backgroundColor: '#f8fcee',
+    backgroundColor: '#e6e1f9',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   walk: {
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: '#8d67e4',
+    backgroundColor: '#26156a',
     width: 332,
     height: 134,
     left: 29,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     top: 30,
     backgroundColor: '#D9D9D9',
     borderRadius: 50,
-    color: '#070902',
+    color: '#0b061e',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     fontSize: 15,
     lineHeight: 19,
-    color: '#070902',
+    color: '#0b061e',
   },
   all: {
     position: 'absolute',
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     height: 17,
     left: 306,
     top: 199,
-    color: '#070902',
+    color: '#0b061e',
   },
   professional: {
     position: 'absolute',
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     left: 23,
   },
   safeArea: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f4f2fc',
     height: '100%',
   },
 });

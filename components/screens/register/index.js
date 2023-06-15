@@ -23,17 +23,19 @@ export default function RegisterScreen() {
       style={{
         flex: 1,
         justifyContent: 'center',
+        height: '100%',
+        backgroundColor: '#ffffff',
       }}>
       <KeyboardAvoidingView>
         <Image
           style={styles.image}
           source={require('../../../assets/images/walking2.png')}
         />
-        <InputComponent placeholder="nome completo" />
-        <InputComponent placeholder="senha" />
-        <InputComponent placeholder="confirmar senha" />
-        <InputComponent placeholder="email" />
-        <InputComponent placeholder="CPF/CNPJ" />
+        <InputComponent placeholder="nome completo" key={1}/>
+        <InputComponent placeholder="senha" key={2}/>
+        <InputComponent placeholder="confirmar senha" key={3}/>
+        <InputComponent placeholder="email" key={4}/>
+        <InputComponent placeholder="CPF/CNPJ" key={5}/>
         <RadioComponent
         selected={selected}
         options={['CPF', 'CNPJ']}
@@ -58,14 +60,14 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     marginHorizontal: 20,
     borderRadius: 8,
-    backgroundColor: '#CBB279',
+    backgroundColor: '#8d67e4',
     borderColor: '#fff',
     borderWidth: 1,
     display: 'flex',
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: '#070902',
     textAlign: 'center',
   },
   image: {
