@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import { Background } from '../../../Background';
-import { Latest } from '../../../Latest';
-
+import CircleComponent from '../../Circle';
+import { CardComponent } from '../../Card';
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.safeArea}>
       <Image
       style={styles.image}
      source={require('../../../assets/images/dog.png')}
@@ -18,20 +17,25 @@ export default function HomeScreen() {
         <Text>Tamo aqui</Text>
       </TouchableOpacity>
       <View style={styles.walk}>
-        <TouchableOpacity style={styles.insideWalk}>
-          <Text>Walking</Text>
-        </TouchableOpacity>
+        <CircleComponent
+        text="Walking"
+        />
+        <CircleComponent
+        text="Training"
+        />
+        <CircleComponent
+        text="Shop"
+        />
       </View>
       <TouchableOpacity >
         <Text style={styles.find}>Proximos á você</Text>
       </TouchableOpacity>
+      <CardComponent
+      people={['Marcelo']}
+      />
       <TouchableOpacity>
         <Text style={styles.all}>Ver Todos</Text>
       </TouchableOpacity>
-      {/* <TouchableOpacity>
-        <Text style={styles.professional}>Ver Todos</Text>
-      </TouchableOpacity> */}
-      <Latest style={styles.professional}/>
     </SafeAreaView>
   );
 }
@@ -51,6 +55,7 @@ const styles = StyleSheet.create({
     top: 101,
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#060803',
   },
   top: {
     position: 'absolute',
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
     height: 58,
     left: 29,
     top: 135,
-    backgroundColor: '#CBB279',
+    backgroundColor: '#f8fcee',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -66,22 +71,28 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   walk: {
-    backgroundColor: '#617A55',
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: '#8d67e4',
     width: 332,
     height: 134,
     left: 29,
     top: 180,
     borderRadius: 15,
-    alignContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
   insideWalk: {
     position: 'absolute',
-    width: 63,
-    height: 61,
+    width: 70,
+    height: 70,
     left: 15,
     top: 30,
     backgroundColor: '#D9D9D9',
+    borderRadius: 50,
+    color: '#070902',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   find: {
     position: 'absolute',
@@ -94,7 +105,7 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     fontSize: 15,
     lineHeight: 19,
-    color: '#617A55',
+    color: '#070902',
   },
   all: {
     position: 'absolute',
@@ -102,13 +113,27 @@ const styles = StyleSheet.create({
     height: 17,
     left: 306,
     top: 199,
-    color: '#CBB279',
+    color: '#070902',
   },
   professional: {
     position: 'absolute',
     width: 338,
     height: 75,
     left: 23,
-    backgroundColor: 'green',
+  },
+  safeArea: {
+    backgroundColor: '#ffffff',
+    height: '100%',
   },
 });
+
+
+/**
+ *
+ *--text: #ffffff;
+--background: #15131b;
+--primary-button: #8f6f61;
+--secondary-button: #262131;
+--accent: #385240;
+ *
+ */
