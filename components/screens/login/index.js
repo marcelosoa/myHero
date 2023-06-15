@@ -5,11 +5,17 @@ import {
   Image,
   Text,
   View,
-  TouchableOpacity,
 } from 'react-native';
 import InputComponent from '../../Input';
+import ButtonComponent from '../../Button/index';
 
 export default function LoginScreen() {
+
+
+  function handleCreateAccount() {
+
+  }
+
   return (
     <SafeAreaView
       style={{
@@ -17,6 +23,8 @@ export default function LoginScreen() {
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
+        backgroundColor: '#ffffff',
+        height: '100%',
       }}>
       <Image
         style={styles.image}
@@ -33,17 +41,14 @@ export default function LoginScreen() {
             placeholder="password"
             style={styles.inputcomponent}
           />
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.textOpacity}>Conectar-se</Text>
-          </TouchableOpacity>
+          <ButtonComponent text="Conectar-se" style={styles.button} />
         </View>
         <View style={styles.viewBottom}>
-          <TouchableOpacity>
-            <Text style={styles.signUp}>Cadastrar-se</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
-          </TouchableOpacity>
+          <ButtonComponent style={styles.signUp} text="Cadastrar-se" onPress={handleCreateAccount()}/>
+          <ButtonComponent
+            style={styles.forgotPassword}
+            text="Esqueceu a senha"
+          />
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -72,8 +77,11 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     marginHorizontal: 1,
     borderRadius: 8,
-    backgroundColor: '#CBB279',
+    backgroundColor: '#8d67e4',
     borderColor: '#fff',
+    textAlign: 'center',
+    alignItems: 'center',
+    color: '#fff',
     borderWidth: 1,
     display: 'flex',
     justifyContent: 'center',
@@ -89,7 +97,7 @@ const styles = StyleSheet.create({
     height: 22,
     fontSize: 18,
     lineHeight: 22,
-    color: '#081710',
+    color: '#070902',
     fontWeight: '700',
     fontStyle: 'normal',
   },
@@ -100,9 +108,13 @@ const styles = StyleSheet.create({
   },
   viewBottom: {
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
   },
   signUp: {
-    color: '#CBB279',
+    position: 'absolute',
+    color: '#070902',
     width: 105,
     height: 17,
     left: 18,
@@ -112,13 +124,13 @@ const styles = StyleSheet.create({
     lineHeight: 17,
   },
   forgotPassword: {
+    color: '#070902',
     width: 105,
     height: 17,
     left: 251,
     position: 'absolute',
     fontFamily: 'Inter',
     fontStyle: 'normal',
-    fontWeight: '700',
     fontSize: 14,
     lineHeight: 17,
   },
